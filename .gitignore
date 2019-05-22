@@ -30,4 +30,4 @@ cloud9_plugins.sh
 /.setup_runs
 cloud9_plugins.sh
 /node_modules
-package-json.lock
+package-lock.json
