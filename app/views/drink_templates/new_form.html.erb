@@ -1,0 +1,51 @@
+<h1>
+  Add a new drink
+</h1>
+
+
+<hr>
+
+<form action="/create_drink" method="post">
+
+  <div class="form-group">
+    <label for="size">
+      Size
+    </label>
+
+    <input type="text" id="size" name="size" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="caffeine_amount">
+      Caffeine amount
+    </label>
+
+    <input type="text" id="caffeine_amount" name="caffeine_amount" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="coffee_chain">
+      Coffee chain
+    </label>
+
+    <input type="text" id="coffee_chain" name="coffee_chain" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="type_of_drink">
+      Type of drink
+    </label>
+
+    <input type="text" id="type_of_drink" name="type_of_drink" class="form-control">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create drink
+  </button>
+</form>
+
+<hr>
+
+<a href="/drinks">
+  Go back
+</a>

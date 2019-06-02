@@ -1,0 +1,42 @@
+<% if @caffeine_limit.errors.any? %>
+  <% @caffeine_limit.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit caffeine limit #<%= @caffeine_limit.id %>
+</h1>
+
+<hr>
+
+<form action="/update_caffeine_limit/<%= @caffeine_limit.id %>" method="post">
+
+  <div class="form-group">
+    <label for="caffeine_maximum">
+      Caffeine maximum
+    </label>
+
+    <input type="text" id="caffeine_maximum" name="caffeine_maximum" class="form-control" value="<%= @caffeine_limit.caffeine_maximum %>">
+  </div>
+
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @caffeine_limit.user_id %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update caffeine limit
+  </button>
+</form>
+
+<hr>
+
+<a href="/caffeine_limits">
+  Go back
+</a>

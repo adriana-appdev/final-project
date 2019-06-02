@@ -1,0 +1,45 @@
+id;coffee_chain;size;type_of_drink;caffeine_amount
+1;Starbucks;Short;Caffeinated coffee;180
+2;Starbucks;Tall;Caffeinated coffee;260
+3;Starbucks;Grande;Caffeinated coffee;330
+4;Starbucks;Venti;Caffeinated coffee;415
+5;Starbucks;One shot;Expresso;75
+6;Starbucks;Two shot;Expresso;150
+7;Starbucks;Three shot;Expresso;225
+8;Starbucks;Short;Decaf;15
+9;Starbucks;Tall;Decaf;20
+10;Starbucks;Grande;Decaf;25
+11;Starbucks;Venti;Decaf;30
+12;McDonald's;Small;Caffeinated coffee;109
+13;McDonald's;Medium;Caffeinated coffee;145
+14;McDonald's;Large ;Caffeinated coffee;180
+15;McDonald's;One shot;Expresso;71
+16;McDonald's;Small;Decaf;8
+17;McDonald's;Medium;Decaf;11
+18;McDonald's;Large ;Decaf;14
+19;Dunkin Donuts;Small;Caffeinated coffee;215
+20;Dunkin Donuts;Medium;Caffeinated coffee;302
+21;Dunkin Donuts;Large ;Caffeinated coffee;431
+22;Dunkin Donuts;Extra Large;Caffeinated coffee;517
+23;Dunkin Donuts;One shot;Expresso;75
+24;Dunkin Donuts;Small;Decaf;53
+25;Dunkin Donuts;Large ;Decaf;128
+26;Costa Coffee;Primo ;Expresso;92
+27;Costa Coffee;Medio ;Expresso;185
+28;Costa Coffee;Massimo;Expresso;277
+29;Costa Coffee;Primo ;Caffeinated coffee;195
+30;Costa Coffee;Medio ;Caffeinated coffee;277
+31;Costa Coffee;Massimo;Caffeinated coffee;370
+32;Costa Coffee;Primo ;Latte;92
+33;Costa Coffee;Medio ;Latte;185
+34;Costa Coffee;Massimo;Latte;277
+35;Costa Coffee;Primo ;Cappuccino;185
+36;Costa Coffee;Medio ;Cappuccino;277
+37;Costa Coffee;Massimo;Cappuccino;370
+38;Costa Coffee;Primo ;Flat White;277
+39;Costa Coffee;Primo ;Cortado;185
+40;Intelligentsia;Small;Caffeinated coffee;70
+41;Intelligentsia;Medium;Caffeinated coffee;95
+42;Intelligentsia;Large ;Caffeinated coffee;140
+43;Intelligentsia;One shot;Expresso;63
+44;Intelligentsia;Two shot;Expresso;125

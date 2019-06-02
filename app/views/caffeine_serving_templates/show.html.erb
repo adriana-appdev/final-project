@@ -1,0 +1,72 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Caffeine serving #<%= @caffeine_serving.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/caffeine_servings" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/caffeine_servings/<%= @caffeine_serving.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit caffeine serving
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/delete_caffeine_serving/<%= @caffeine_serving.id %>" class="btn btn-block btn-outline-secondary">
+          Delete caffeine serving
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Caffeine amount
+      </dt>
+      <dd>
+        <%= @caffeine_serving.caffeine_amount %>
+      </dd>
+
+      <dt>
+        Coffee chain
+      </dt>
+      <dd>
+        <%= @caffeine_serving.coffee_chain %>
+      </dd>
+
+      <dt>
+        User
+      </dt>
+      <dd>
+        <%= @caffeine_serving.user_id %>
+      </dd>
+
+      <dt>
+        Drinks
+      </dt>
+      <dd>
+        <%= @caffeine_serving.drinks_id %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@caffeine_serving.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@caffeine_serving.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+

@@ -1,0 +1,72 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Drink #<%= @drink.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/drinks" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/drinks/<%= @drink.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit drink
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="/delete_drink/<%= @drink.id %>" class="btn btn-block btn-outline-secondary">
+          Delete drink
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Size
+      </dt>
+      <dd>
+        <%= @drink.size %>
+      </dd>
+
+      <dt>
+        Caffeine amount
+      </dt>
+      <dd>
+        <%= @drink.caffeine_amount %>
+      </dd>
+
+      <dt>
+        Coffee chain
+      </dt>
+      <dd>
+        <%= @drink.coffee_chain %>
+      </dd>
+
+      <dt>
+        Type of drink
+      </dt>
+      <dd>
+        <%= @drink.type_of_drink %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@drink.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@drink.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+

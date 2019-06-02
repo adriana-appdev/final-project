@@ -1,0 +1,35 @@
+<h1>
+  Add a new caffeine limit
+</h1>
+
+
+<hr>
+
+<form action="/create_caffeine_limit" method="post">
+
+  <div class="form-group">
+    <label for="caffeine_maximum">
+      Caffeine maximum
+    </label>
+
+    <input type="text" id="caffeine_maximum" name="caffeine_maximum" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <input type="text" id="user_id" name="user_id" class="form-control">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create caffeine limit
+  </button>
+</form>
+
+<hr>
+
+<a href="/caffeine_limits">
+  Go back
+</a>

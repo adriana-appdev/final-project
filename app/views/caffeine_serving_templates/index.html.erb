@@ -1,0 +1,90 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All caffeine servings
+    </h1>
+
+    <a href="/caffeine_servings/new" class="btn btn-block btn-outline-secondary">
+      Add a new caffeine serving
+    </a>
+  </div>
+</div>
+
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Caffeine amount
+        </th>
+
+        <th>
+          Coffee chain
+        </th>
+
+        <th>
+          User
+        </th>
+
+        <th>
+          Drinks
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @caffeine_servings.each do |caffeine_serving| %>
+      <tr>
+        <td>
+          <%= caffeine_serving.id %>
+        </td>
+
+        <td>
+          <%= caffeine_serving.caffeine_amount %>
+        </td>
+
+        <td>
+          <%= caffeine_serving.coffee_chain %>
+        </td>
+
+        <td>
+          <%= caffeine_serving.user_id %>
+        </td>
+
+        <td>
+          <%= caffeine_serving.drinks_id %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(caffeine_serving.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(caffeine_serving.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/caffeine_servings/<%= caffeine_serving.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<% if @caffeine_serving.errors.any? %>
+  <% @caffeine_serving.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit caffeine serving #<%= @caffeine_serving.id %>
+</h1>
+
+<hr>
+
+<form action="/update_caffeine_serving/<%= @caffeine_serving.id %>" method="post">
+
+  <div class="form-group">
+    <label for="caffeine_amount">
+      Caffeine amount
+    </label>
+
+    <input type="text" id="caffeine_amount" name="caffeine_amount" class="form-control" value="<%= @caffeine_serving.caffeine_amount %>">
+  </div>
+
+  <div class="form-group">
+    <label for="coffee_chain">
+      Coffee chain
+    </label>
+
+    <input type="text" id="coffee_chain" name="coffee_chain" class="form-control" value="<%= @caffeine_serving.coffee_chain %>">
+  </div>
+
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @caffeine_serving.user_id %>">
+  </div>
+
+  <div class="form-group">
+    <label for="drinks_id">
+      Drinks
+    </label>
+
+    <input type="text" id="drinks_id" name="drinks_id" class="form-control" value="<%= @caffeine_serving.drinks_id %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update caffeine serving
+  </button>
+</form>
+
+<hr>
+
+<a href="/caffeine_servings">
+  Go back
+</a>
