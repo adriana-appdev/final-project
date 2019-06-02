@@ -9,6 +9,8 @@
 #  drinks_id       :integer
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  type_of_drink   :string
+#  size            :string
 #
 
 class CaffeineServing < ApplicationRecord
