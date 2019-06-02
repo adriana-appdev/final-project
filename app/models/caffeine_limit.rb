@@ -3,7 +3,7 @@
 # Table name: caffeine_limits
 #
 #  id               :integer          not null, primary key
-#  caffeine_maximum :string
+#  caffeine_maximum :integer
 #  user_id          :integer
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null

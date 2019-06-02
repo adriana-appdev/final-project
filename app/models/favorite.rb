@@ -3,8 +3,8 @@
 # Table name: favorites
 #
 #  id              :integer          not null, primary key
-#  coffee_chain_id :integer
-#  size            :integer
+#  coffee_chain_id :string
+#  size            :string
 #  drinks_id       :integer
 #  user_id         :integer
 #  created_at      :datetime         not null
