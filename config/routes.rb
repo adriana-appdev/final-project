@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   match("", { :controller => "index", :action => "indexpage", :via => "get" })
+  match("/calccaffeine", { :controller => "index", :action => "calccaffeine", :via => "get" })
   
   # Routes for the Drink resource:
 
