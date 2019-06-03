@@ -8,7 +8,8 @@ class IndexController < ApplicationController
     end
 
     def calcresult
-        
+    
+    #identify the caffeine level of each new drink consumed by the user 
         @coffee_chain = params.fetch("coffee_chain")
         @size = params.fetch("size")
         @drink_type = params.fetch("drink")

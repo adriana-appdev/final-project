@@ -13,7 +13,9 @@ class CaffeineLimit < ApplicationRecord
     
     belongs_to :user
     
+    
+    
     def max_caf
-        return User.where({:id => self.id}).pluck(:caffeine_maximum).at(0)
+      return User.where({:id => user_id}).pluck(:caffeine_maximum).at(0)
     end 
 end
