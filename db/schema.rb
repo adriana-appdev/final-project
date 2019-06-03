@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190602234321) do
-
-  create_table "Favorites", force: :cascade do |t|
-    t.string "coffee_chain"
-    t.string "size"
-    t.integer "drinks_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20190603002836) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -75,6 +66,15 @@ ActiveRecord::Schema.define(version: 20190602234321) do
     t.float "caffeine_amount"
     t.string "coffee_chain"
     t.string "type_of_drink"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.string "coffee_chain"
+    t.string "size"
+    t.integer "drinks_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
