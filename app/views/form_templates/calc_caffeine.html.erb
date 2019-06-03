@@ -1,6 +1,6 @@
 <h1> Caffeine Intake Calculation</h1>
 
-<form action= "/calcresult"> 
+<form><h2><p> Consult current options:</p></h2>
 <p> 
     <label for="chain_dropdown">Coffee chain</label>
     <select id="chain_dropdown" name="coffee_chain">
@@ -35,7 +35,7 @@
     
     </select>
 <p> 
-    <label for="drink_dropdown">Drink</label>
+    <label for="drink_dropdown">Drink type</label>
     <select id="drink_dropdown" name="drink">
                 
             <option value="1">Caffeinated coffee</option>
@@ -47,8 +47,19 @@
             <option value="5">Cortado</option>
          
         </option>
-    
     </select>
+</form>
+
+<form action= "/calcresult/:coffee_chain/:size/:drink"><h2><p>Calculate consumption: </p></h2> 
+    <label for="chain">Enter a coffee chain</label>
+    <input id= "chain" type= "text" name= "coffee_chain"> 
+    
+    <label for="size">Enter a size of drink</label>
+    <input id= "size" type= "text" name= "size of drink"> 
+
+    <label for="drink">Enter a type of drink</label>
+    <input id= "drink" type= "text" name= "type of drink"> 
+
     <button>Record Consumption</button></p>
 <p><form>
 

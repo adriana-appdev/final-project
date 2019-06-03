@@ -8,8 +8,16 @@ class IndexController < ApplicationController
     end
 
     def calcresult
-        # NEED TO DO AN IF to MATCH INPUT WITH TABLE
+        
+        @coffee_chain = params.fetch("coffee_chain")
+        @size = params.fetch("size")
+        @drink_type = params.fetch("drink")
+        
+        amount = Drink.where(:coffee_chain => @coffee_chain).where(:size => @size).where(:type_of_drink => @drink_type).pluck(:caffeine_amount)
+        @caf_amount = amount 
+        
         render("result_templates/calc_result.html.erb")
     end 
-
 end 
+
+# CREATE VALIDATIONS/SAVE NEW ROWS LOOK AT https://ide.c9.io/adrianabrito/msm_queries_excercise

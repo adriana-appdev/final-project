@@ -1,23 +1,22 @@
 <h1> Calculation Results </h1>
 
-#NEED TO TIE IN TO THE PREVIOUS PAGE
-<div><p> You have consumed a  aaaa coffee from aaaa of aaaa size, which has xxxx caffeine milligrams </p></div>
+<div><p> You have consumed a <%= @drink_type%> coffee from <%= @coffee_chain%> of <%= @size%> size, which has xxxx caffeine milligrams </p></div>
 
-<% if computer_move == thresold %>
+<% if <% @caf_amount%> == CaffeineLimit.max_caf %>
     <p><h1> You reached your limit!</h1></p>
-    <h1 class = small ><i class="far fa-hand-rock"></i></h1>
+    <h1 class = small ><i class="far fa-frown-open"></i></h1>
     
     <h1>You are set for the day!</h1>
 
-<% elsif caffeinesum > thresold %>
+<% elsif <% @caf_amount%> >= CaffeineLimit.max_caf %>
     <p> <h1>You drank too much coffee today!</h1></p>
-    <h1 class = small ><i class="far fa-hand-paper"></i></h1>
+    <h1 class = small ><i class="far fa-dizzy"></i></h1>
     
     <h1>Take some rest!</h1>
     
-<% else caffeinesum < threshold%>
+<% else <% @caf_amount%> =< CaffeineLimit.max_caf %>
     <p> <h1>You are doing ok!</h1></p>
-    <h1  class = small ><i class="far fa-hand-scissors"></i></h1>
+    <h1  class = small ><i class="far fa-smile-beam"></i></h1>
     
     <h1>You can have another coffee!</h1>
     <% end%>
