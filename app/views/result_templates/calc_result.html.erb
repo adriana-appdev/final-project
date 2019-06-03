@@ -1,12 +1,27 @@
 <h1> Calculation Results </h1>
 
-<dl> 
-    <dt>xxxr</dt>
-    <dd>xxxxxxxxxxxxxxxxxxxx</dd>
-    <dt>yyy</dt>
-    <dd>yyyyyyyyyyyyyyyyyyyy</dd>
-</dl>
+#NEED TO TIE IN TO THE PREVIOUS PAGE
+<div><p> You have consumed a  aaaa coffee from aaaa of aaaa size, which has xxxx caffeine milligrams </p></div>
 
-# ADD AN IF THAT DISPLAYS MESSAGE BASED ON FINAL NUMBER 
+<% if computer_move == thresold %>
+    <p><h1> You reached your limit!</h1></p>
+    <h1 class = small ><i class="far fa-hand-rock"></i></h1>
+    
+    <h1>You are set for the day!</h1>
 
-#ADD A LINK INSTEAD TO CALCULATE A NEW INPUT AND SENDS YOU TO THE NEW 
+<% elsif caffeinesum > thresold %>
+    <p> <h1>You drank too much coffee today!</h1></p>
+    <h1 class = small ><i class="far fa-hand-paper"></i></h1>
+    
+    <h1>Take some rest!</h1>
+    
+<% else caffeinesum < threshold%>
+    <p> <h1>You are doing ok!</h1></p>
+    <h1  class = small ><i class="far fa-hand-scissors"></i></h1>
+    
+    <h1>You can have another coffee!</h1>
+    <% end%>
+
+# DONT FORGET TO SAVE AND ADD THIS IN THE SERVINGS TABLE AS A NEW RECORD 
+
+<div><a href="https://final-project-adriana-adrianabrito.c9users.io/calccaffeine?coffee_chain=1&size=1&drink=1"> Introduce new input</a></div>
