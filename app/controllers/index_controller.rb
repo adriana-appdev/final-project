@@ -14,8 +14,8 @@ class IndexController < ApplicationController
         @size = params.fetch("size")
         @drink_type = params.fetch("drink")
         
-        amount = Drink.where(:coffee_chain => @coffee_chain).where(:size => @size).where(:type_of_drink => @drink_type).pluck(:caffeine_amount)
-        @caf_amount = amount 
+        amount = Drink.where(:coffee_chain => @coffee_chain).where(:size => @size).where(:type_of_drink => @drink_type).pluck(:caffeine_amount).at(0)
+        @caf_amount = amount.to_i
         
         render("result_templates/calc_result.html.erb")
     end 
