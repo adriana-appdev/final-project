@@ -27,6 +27,7 @@ class IndexController < ApplicationController
         @caf_amount = @amount
         
         # check photogram asigment to know hoe to save variables 
+        # add filter by day
         
         render("result_templates/calc_result.html.erb")
     end 
