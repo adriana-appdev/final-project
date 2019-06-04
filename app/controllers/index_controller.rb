@@ -10,12 +10,23 @@ class IndexController < ApplicationController
     def calcresult
     
     #identify the caffeine level of each new drink consumed by the user 
-        @coffee_chain = params.fetch("coffee_chain")
-        @size = params.fetch("size")
-        @drink_type = params.fetch("drink")
+         
+        chain = params.fetch("coffee_chain").to_s
+        @coffee_chain = chain
         
-        amount = Drink.where(:coffee_chain => @coffee_chain).where(:size => @size).where(:type_of_drink => @drink_type).pluck(:caffeine_amount).at(0)
-        @caf_amount = amount.to_i
+        size = params.fetch("size_of_drink").to_s
+        @size = size
+        
+        drink = params.fetch("type_of_drink").to_s
+        @drink_type = drink
+        
+        @drinks_by_vendor = Drink.where(:coffee_chain => chain)
+        @drinks_by_vendor_size = @drinks_by_vendor.where(:size => size)
+        @amount = @drinks_by_vendor_size.where(:type_of_drink => drink).pluck(:caffeine_amount).at(0)
+
+        @caf_amount = @amount
+        
+        # check photogram asigment to know hoe to save variables 
         
         render("result_templates/calc_result.html.erb")
     end 

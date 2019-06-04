@@ -1,32 +1,37 @@
+<html> 
+<head> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"></head>
+
+
+<body>
 <h1> Calculation Results </h1>
 
-<div><p> You have consumed a <%= @drink_type%> coffee from <%= @coffee_chain%> of <%= @size%> size, which has <%= @caf_amount%> caffeine milligrams </p></div>
+<div><p> You have consumed a <%= @drink_type%> from <%= @coffee_chain%> of <%= @size%> size, which has <%= @caf_amount%> caffeine milligrams </p></div>
 
 <% if @caf_amount >=600 %>
-    <p><h1> You reached your limit!</h1></p>
-    <h1 class = small ><i class="far fa-frown-open"></i></h1>
+    <p><h3> You reached your limit!</h3></p>
+    <h1 class = big ><i class="far fa-frown-open"></i></h1>
     
     <h1>You are set for the day!</h1>
 
 <% elsif @caf_amount <=600 && @caf_amount >= 500 %>
-    <p> <h1>You drank too much coffee today!</h1></p>
-    <h1 class = small ><i class="far fa-dizzy"></i></h1>
+    <p> <h3>You drank too much coffee today!</h3></p>
+    <h1 class = big ><i class="far fa-dizzy"></i></h1>
     
-    <h1>Take some rest!</h1>
+    <h3>Take some rest!</h3>
     
 <% elsif @caf_amount <=500 && @caf_amount >=300 %>
-    <p> <h1>You are doing ok!</h1></p>
-    <h1  class = small ><i class="far fa-smile-beam"></i></h1>
+    <p> <h3>You are doing ok!</h3></p>
+    <h1  class = big ><i class="far fa-smile-beam"></i></h1>
     
-    <h1>You can have another coffee!</h1>
+    <h3>You can have another coffee!</h3>
     
-<% else @caf_amount <= 300 %>
-    <p> <h1>You are doing great!</h1></p>
-    <h1  class = small ><i class="far fa-smile-beam"></i></h1>
+<% else @caf_amount < 300 %>
+    <p> <h3>You are doing great!</h3></p>
+    <h1  class = big ><i class="far fa-smile-beam"></i></h1>
     
-    <h1>You can have a coffee!</h1>
+    <h3>You can have a coffee today!</h3>
     <% end%>
-
+</body>
 # DONT FORGET TO SAVE AND ADD THIS IN THE SERVINGS TABLE AS A NEW RECORD 
 
 <div><a href="https://final-project-adriana-adrianabrito.c9users.io/calccaffeine?coffee_chain=1&size=1&drink=1"> Introduce new input</a></div>

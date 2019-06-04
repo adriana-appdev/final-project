@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   match("", { :controller => "index", :action => "indexpage", :via => "get" })
   match("/calccaffeine/:coffee_chain/:size/:drink", { :controller => "index", :action => "calccaffeine", :via => "get" })
-  match("/calcresult/:coffee_chain/:size/:drink", { :controller => "index", :action => "calcresult", :via => "get" })
+  match("/calcresult", { :controller => "index", :action => "calcresult", :via => "get" })
   
   # Routes for the Drink resource:
 
