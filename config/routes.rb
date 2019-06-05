@@ -65,8 +65,8 @@ Rails.application.routes.draw do
   # Routes for the Caffeine serving resource:
 
   # CREATE - Not used. Created others instead
-  # get("/caffeine_servings/new", { :controller => "caffeine_servings", :action => "new_form" })
-  # post("/create_caffeine_serving", { :controller => "caffeine_servings", :action => "create_row" })
+  get("/caffeine_servings/new", { :controller => "caffeine_servings", :action => "new_form" })
+  post("/create_caffeine_serving", { :controller => "caffeine_servings", :action => "create_row" })
 
   # READ
   get("/caffeine_servings", { :controller => "caffeine_servings", :action => "index" })
