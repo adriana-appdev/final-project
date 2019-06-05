@@ -8,8 +8,7 @@ class IndexController < ApplicationController
     end
 
     def calcresult
-    
-    #identify the caffeine level of each new drink consumed by the user 
+    #Identify the caffeine level of each new drink and the total daily consumed by each user 
          
         chain = params.fetch("coffee_chain").to_s
         @coffee_chain = chain
@@ -23,14 +22,31 @@ class IndexController < ApplicationController
         @drinks_by_vendor = Drink.where(:coffee_chain => chain)
         @drinks_by_vendor_size = @drinks_by_vendor.where(:size => size)
         @amount = @drinks_by_vendor_size.where(:type_of_drink => drink).pluck(:caffeine_amount).at(0)
-
         @caf_amount = @amount
         
-        # check photogram asigment to know hoe to save variables 
+        drink_selec = @drinks_by_vendor_size.where(:type_of_drink => drink)
+        daily_drink_selec = drink_selec.where(:created_at => Date.today.all_day)
+        daily_caffeine = daily_drink_selec.pluck(:caffeine_amount)
+        @daily_amount = daily_caffeine.sum(:caffeine_amount)
+
+        @current_user = User.where(:id => session[:user_id]).first
+        
+        # USER IS NOT BEING SAVED CORRECTLY - solve this when we doo the 
+        # NOT ALL COMBINATION OF CHAIN-SIZE-DRINK TYPE WORK, THESE VALUES WERE INCLUDED BASED ON HOW EACH STORE CALLS THEM
         # add filter by day
         
+        p = CaffeineServing.new
+        
+        p.caffeine_amount = @caf_amount
+        p.user_id = @current_user
+        p.coffee_chain = @coffee_chain
+        p.type_of_drink = @drink_type
+        p.size = @size
+        
+        p.save 
         render("result_templates/calc_result.html.erb")
     end 
+    
 end 
 
 # CREATE VALIDATIONS/SAVE NEW ROWS LOOK AT https://ide.c9.io/adrianabrito/msm_queries_excercise

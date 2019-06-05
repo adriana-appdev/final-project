@@ -4,8 +4,9 @@
 
 <body>
 <h1> Calculation Results </h1>
+<h1><%= @daily_amount.inspect%></h1>
 
-<div><p> You have consumed a <%= @drink_type%> from <%= @coffee_chain%> of <%= @size%> size, which has <%= @caf_amount%> caffeine milligrams </p></div>
+<div><p> You have consumed a <%= @drink_type%> from <%= @coffee_chain%> of <%= @size%> size, which has <%= @caf_amount%> So have consumed <%= %> in total caffeine milligrams </p></div>
 
 <% if @caf_amount >=600 %>
     <p><h3> You reached your limit!</h3></p>
@@ -32,6 +33,5 @@
     <h3>You can have a coffee today!</h3>
     <% end%>
 </body>
-# DONT FORGET TO SAVE AND ADD THIS IN THE SERVINGS TABLE AS A NEW RECORD 
 
 <div><a href="https://final-project-adriana-adrianabrito.c9users.io/calccaffeine?coffee_chain=1&size=1&drink=1"> Introduce new input</a></div>
