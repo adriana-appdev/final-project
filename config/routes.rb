@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   match("", { :controller => "index", :action => "indexpage", :via => "get" })
-  match("/calccaffeine", { :controller => "index", :action => "calccaffeine", :via => "get" })
-  match("/calcresult", { :controller => "index", :action => "calcresult", :via => "get" })
   
   # Routes for the Drink resource:
 
@@ -64,9 +62,13 @@ Rails.application.routes.draw do
 
   # Routes for the Caffeine serving resource:
 
-  # CREATE - Not used. Created others instead
-  get("/caffeine_servings/new", { :controller => "caffeine_servings", :action => "new_form" })
-  post("/create_caffeine_serving", { :controller => "caffeine_servings", :action => "create_row" })
+  # CREATE - 
+  match("/calccaffeine", { :controller => "index", :action => "calccaffeine", :via => "get" })
+  match("/calcresult", { :controller => "index", :action => "calcresult", :via => "get" })
+  
+  # Not used- Cusotmized others 
+  #get("/caffeine_servings/new", { :controller => "caffeine_servings", :action => "new_form" })
+  #post("/create_caffeine_serving", { :controller => "caffeine_servings", :action => "create_row" })
 
   # READ
   get("/caffeine_servings", { :controller => "caffeine_servings", :action => "index" })

@@ -4,7 +4,7 @@
       All caffeine servings
     </h1>
 
-    <a href="/caffeine_servings/new" class="btn btn-block btn-outline-secondary">
+    <a href="/calccaffeine" class="btn btn-block btn-outline-secondary">
       Add a new caffeine serving
     </a>
   </div>
@@ -30,20 +30,9 @@
         </th>
 
         <th>
-          User
-        </th>
-
-        <th>
-          Drinks
-        </th>
-
-        <th>
           Created at
         </th>
 
-        <th>
-          Updated at
-        </th>
 
         <th>
         </th>
@@ -64,18 +53,7 @@
         </td>
 
         <td>
-          <%= caffeine_serving.user_id %>
-        </td>
-
-        <td>
-          <%= caffeine_serving.drinks_id %>
-        </td>
-
-        <td>
           <%= time_ago_in_words(caffeine_serving.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(caffeine_serving.updated_at) %> ago
         </td>
 
         <td>

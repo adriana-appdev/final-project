@@ -5,8 +5,10 @@
 
 <h1> Caffeine Intake Calculation</h1>
 
-<form><h2><p> Consult current options:</p></h2>
-<p> 
+<form>
+    <div><p>Consult current options:</p></div> 
+
+  <div class="form-group">
     <label for="chain_dropdown">Coffee chain</label>
     <select id="chain_dropdown" name="coffee_chain">
         
@@ -15,11 +17,8 @@
         <option value="3">Dunkin Donuts</option>
         <option value="4">Costa Coffee</option>
         <option value="5">Intelligentsia</option>
-         
-        </option>
-    
     </select>
-<p> 
+
     <label for="size_dropdown">Size</label>
     <select id="size_dropdown" name="size">
          <option value="1">Short</option>
@@ -37,9 +36,8 @@
          <option value="13">Medio</option>
          <option value="13">Massimo</option>
         </option>
-    
     </select>
-<p> 
+
     <label for="drink_dropdown">Drink type</label>
     <select id="drink_dropdown" name="drink">
                 
@@ -50,11 +48,11 @@
             <option value="5">Cappuccino</option>
             <option value="4">Flat White</option>
             <option value="5">Cortado</option>
-         
-        </option>
     </select>
+    </div>
 </form>
 
+  <div class="form-group">
 <form action= "/calcresult"><h2><p>Calculate consumption: </p></h2> 
     <label for="chain">Enter a coffee chain</label>
     <input id= "chain" type= "text" name= "coffee_chain"> 
@@ -66,8 +64,7 @@
     <input id= "drink" type= "text" name= "type_of_drink"> 
 
     <button>Record Consumption</button></p>
-<p><form>
-
+<form></div>
 </form>
 
 <a href="https://www.google.com"> Go search Google</a>

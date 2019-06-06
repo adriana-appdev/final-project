@@ -20,7 +20,6 @@ class CaffeineServingsController < ApplicationController
   def create_row
     @caffeine_serving = CaffeineServing.new
 
-    @caffeine_serving.caffeine_amount = params.fetch("caffeine_amount")
     @caffeine_serving.coffee_chain = params.fetch("coffee_chain")
     @caffeine_serving.user_id = params.fetch("user_id")
     @caffeine_serving.drinks_id = params.fetch("drinks_id")
