@@ -24,16 +24,12 @@ class IndexController < ApplicationController
         @amount = @drinks_by_vendor_size.where(:type_of_drink => drink).pluck(:caffeine_amount).at(0)
         @caf_amount = @amount
         
-        drink_selec = @drinks_by_vendor_size.where(:type_of_drink => drink)
-        daily_drink_selec = drink_selec.where(:created_at => Date.today.in_time_zone("America/Chicago").all_day)
-        @daily_amount = daily_drink_selec.sum(:caffeine_amount)
-
-        # @current_user = User.where(:id => session[:user_id]).first
+        @current_user = User.where(:id => session[:user_id]).first
+       
+        @daily_amount = CaffeineServing.where(:created_at => Date.today.all_day).sum(:caffeine_amount)
         
-        @daily_amount = current_user.caffeine_servings.where(:created_at => Date.today.in_time_zone("America/Chicago").all_day).sum(:caffeine_amount)
-        
+        #@daily_amount =current_user.caffeine_servings.where(:created_at => Date.today.in_time_zone("America/Chicago").all_day).sum(:caffeine_amount)
         # USER IS NOT BEING SAVED CORRECTLY - solve this when we doo the 
-        # NOT ALL COMBINATION OF CHAIN-SIZE-DRINK TYPE WORK, THESE VALUES WERE INCLUDED BASED ON HOW EACH STORE CALLS THEM
         
         p = CaffeineServing.new
         
