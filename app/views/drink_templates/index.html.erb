@@ -1,8 +1,17 @@
+
 <div class="row mb-3">
   <div class="col-md-12">
     <h1>
       All drinks
     </h1>
+    
+    <div>Below is a list of all drinks from which you can choose from: </div>
+
+  <a><img src="https://image.shutterstock.com/image-photo/cup-coffee-latte-beans-isolated-260nw-583224151.jpg">
+    </a>
+  </div>
+</div>
+
 
     <a href="/drinks/new" class="btn btn-block btn-outline-secondary">
       Add a new drink
@@ -42,10 +51,6 @@
         </th>
 
         <th>
-          Updated at
-        </th>
-
-        <th>
         </th>
       </tr>
 
@@ -74,9 +79,6 @@
         <td>
           <%= time_ago_in_words(drink.created_at) %> ago
         </td>
-        <td>
-          <%= time_ago_in_words(drink.updated_at) %> ago
-        </td>
 
         <td>
           <a href="/drinks/<%= drink.id %>">
@@ -88,3 +90,6 @@
     </table>
   </div>
 </div>
+<a href="https://final-project-adriana-adrianabrito.c9users.io/">
+  Go back
+</a>
