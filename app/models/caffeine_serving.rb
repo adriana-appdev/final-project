@@ -16,6 +16,6 @@
 class CaffeineServing < ApplicationRecord
     
     belongs_to :drinks, :class_name => "Drink"
-    belongs_to :user
+    belongs_to :user, :class_name => "User"
     
 end
