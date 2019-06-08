@@ -44,19 +44,19 @@ Rails.application.routes.draw do
   # Routes for the Caffeine limit resource:
 
   # CREATE
-  get("/caffeine_limits/new", { :controller => "caffeine_limits", :action => "new_form" })
-  post("/create_caffeine_limit", { :controller => "caffeine_limits", :action => "create_row" })
+  # get("/caffeine_limits/new", { :controller => "caffeine_limits", :action => "new_form" })
+  # post("/create_caffeine_limit", { :controller => "caffeine_limits", :action => "create_row" })
 
   # READ
-  get("/caffeine_limits", { :controller => "caffeine_limits", :action => "index" })
-  get("/caffeine_limits/:id_to_display", { :controller => "caffeine_limits", :action => "show" })
+  # get("/caffeine_limits", { :controller => "caffeine_limits", :action => "index" })
+  # get("/caffeine_limits/:id_to_display", { :controller => "caffeine_limits", :action => "show" })
 
   # UPDATE
-  get("/caffeine_limits/:prefill_with_id/edit", { :controller => "caffeine_limits", :action => "edit_form" })
-  post("/update_caffeine_limit/:id_to_modify", { :controller => "caffeine_limits", :action => "update_row" })
+  # get("/caffeine_limits/:prefill_with_id/edit", { :controller => "caffeine_limits", :action => "edit_form" })
+  # post("/update_caffeine_limit/:id_to_modify", { :controller => "caffeine_limits", :action => "update_row" })
 
   # DELETE
-  get("/delete_caffeine_limit/:id_to_remove", { :controller => "caffeine_limits", :action => "destroy_row" })
+  # get("/delete_caffeine_limit/:id_to_remove", { :controller => "caffeine_limits", :action => "destroy_row" })
 
   #------------------------------
 
