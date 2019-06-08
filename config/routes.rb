@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-
+  
+  # Routes for the Index resource:
   match("", { :controller => "index", :action => "indexpage", :via => "get" })
+  
+  # Routes for the Users resource:
+  match("/users", { :controller => "users", :action => "index", :via => "get" })
+  # match("/users/:id", { :controller => "users", :action => "show", :via => "get" })
   
   # Routes for the Drink resource:
 
