@@ -25,7 +25,7 @@ class FavoritesController < ApplicationController
     @favorite.type_of_drink = params.fetch("type_of_drink")
     
     #@favorite.user_id = params.fetch("user_id")
-    @favorite.user_id = User.where(:id => session[:user_id]).first
+    @favorite.user_id = current_user.id 
 
       
     if @favorite.valid?
@@ -49,7 +49,7 @@ class FavoritesController < ApplicationController
     @favorite.coffee_chain = params.fetch("coffee_chain")
     @favorite.size = params.fetch("size")
     @favorite.type_of_drink = params.fetch("type_of_drink")
-    @favorite.user_id = params.fetch("user_id")
+    @favorite.user_id = current_user.id
 
     if @favorite.valid?
       @favorite.save

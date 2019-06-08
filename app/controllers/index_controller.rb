@@ -23,18 +23,15 @@ class IndexController < ApplicationController
         @drinks_by_vendor_size = @drinks_by_vendor.where(:size => size)
         @amount = @drinks_by_vendor_size.where(:type_of_drink => drink).pluck(:caffeine_amount).at(0)
         @caf_amount = @amount
-        
-        @current_user = User.where(:id => session[:user_id]).first
-       
         @daily_amount = CaffeineServing.where(:created_at => Date.today.all_day).sum(:caffeine_amount)
         
-        #@daily_amount =current_user.caffeine_servings.where(:created_at => Date.today.in_time_zone("America/Chicago").all_day).sum(:caffeine_amount)
-        # USER IS NOT BEING SAVED CORRECTLY - solve this when we doo the 
+        # @current_user = User.where(:id => session[:user_id]).first
+        # @daily_amount =current_user.caffeine_servings.where(:created_at => Date.today.in_time_zone("America/Chicago").all_day).sum(:caffeine_amount)
         
         p = CaffeineServing.new
         
         p.caffeine_amount = @caf_amount
-        p.user_id = @current_user
+        p.user_id = current_user.id 
         p.coffee_chain = @coffee_chain
         p.type_of_drink = @drink_type
         p.size = @size

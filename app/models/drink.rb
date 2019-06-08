@@ -16,4 +16,7 @@ class Drink < ApplicationRecord
     has_many :caffeine_servings, :foreign_key => "drinks_id", :dependent => :destroy
     has_many :favorites, :foreign_key => "drinks_id", :dependent => :destroy
     
+    validates :size, :presence => true 
+    validates :coffee_chain, :presence => true 
+    validates :type_of_drink, :presence => true 
 end

@@ -46,7 +46,7 @@
         </th>
       </tr>
 
-      <% @caffeine_servings.where({:id => current_user.id}).each do |caffeine_serving| %>
+      <% @caffeine_servings.each do |caffeine_serving| %>
       <tr>
         <td>
           <%= caffeine_serving.id %>
