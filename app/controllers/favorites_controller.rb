@@ -34,7 +34,10 @@ class FavoritesController < ApplicationController
     fav_drink = fav_size.pluck(:id).at(0)
     @favorite.drinks_id = fav_drink
     
-
+    if @favorite == nil 
+      render("favorite_templates/new_form_with_errors.html.erb")
+    end 
+      
     if @favorite.valid?
       @favorite.save
 
@@ -53,7 +56,7 @@ class FavoritesController < ApplicationController
   def update_row
     @favorite = Favorite.find(params.fetch("id_to_modify"))
 
-    @favorite.coffee_chain_id = params.fetch("coffee_chain_id")
+    @favorite.coffee_chain = params.fetch("coffee_chain")
     @favorite.size = params.fetch("size")
     @favorite.drinks_id = params.fetch("drinks_id")
     @favorite.user_id = params.fetch("user_id")
