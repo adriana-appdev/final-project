@@ -20,10 +20,20 @@ class FavoritesController < ApplicationController
   def create_row
     @favorite = Favorite.new
 
-    @favorite.coffee_chain_id = params.fetch("coffee_chain_id")
+    @favorite.coffee_chain = params.fetch("coffee_chain")
     @favorite.size = params.fetch("size")
-    @favorite.drinks_id = params.fetch("drinks_id")
-    @favorite.user_id = params.fetch("user_id")
+    
+    #@favorite.user_id = params.fetch("user_id")
+    @favorite.user_id = User.where(:id => session[:user_id]).first
+    
+    # @favorite.drinks_id = params.fetch("drinks_id") 
+    chain= params.fetch("coffee_chain").to_s
+    size = params.fetch("size").to_s
+    fav_chain = Drink.where(:coffee_chain => chain)
+    fav_size = fav_chain.where(:size => size)
+    fav_drink = fav_size.pluck(:id).at(0)
+    @favorite.drinks_id = fav_drink
+    
 
     if @favorite.valid?
       @favorite.save

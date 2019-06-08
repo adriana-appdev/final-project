@@ -23,6 +23,9 @@
     <table class="table">
       <tr>
         <th>
+          ID
+        </th>
+        <th>
           Coffee chain
         </th>
 
@@ -38,7 +41,10 @@
 
       <% @favorites.each do |favorite| %>
       <tr>
-
+        <td>
+          <%= favorite.id %>
+        </td>
+        
         <td>
           <%= favorite.coffee_chain %>
         </td>

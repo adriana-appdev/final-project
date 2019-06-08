@@ -2,7 +2,7 @@
   Add a new favorite
 </h1>
 
-
+<%= @favorite.drinks_id%>
 <hr>
 
 <form action="/create_favorite" method="post">
@@ -41,3 +41,51 @@
 <a href="/favorites">
   Go back
 </a>
+
+<form>
+    <div><p>Note- If you want to consult current values:</p></div> 
+
+  <div class="form-group">
+    <label for="chain_dropdown">Coffee chain</label>
+    <select id="chain_dropdown" name="coffee_chain">
+        
+        <option value="1">Starbucks</option>
+        <option value="2">McDonald's</option>
+        <option value="3">Dunkin Donuts</option>
+        <option value="4">Costa Coffee</option>
+        <option value="5">Intelligentsia</option>
+    </select>
+
+    <label for="size_dropdown">Size</label>
+    <select id="size_dropdown" name="size">
+         <option value="1">Short</option>
+         <option value="2">Tall</option>
+         <option value="3">Grande</option>
+         <option value="4">Venti</option>
+         <option value="5">One Shot</option>
+         <option value="6">Two Shot</option>
+         <option value="7">Three Shot</option>
+         <option value="8">Small</option>
+         <option value="9">Medium</option>
+         <option value="10">Large</option>
+         <option value="11">Extra Large</option>
+         <option value="12">Primo</option>
+         <option value="13">Medio</option>
+         <option value="13">Massimo</option>
+        </option>
+    </select>
+
+    <label for="drink_dropdown">Drink type</label>
+    <select id="drink_dropdown" name="drink">
+                
+            <option value="1">Caffeinated coffee</option>
+            <option value="2">Expresso</option>
+            <option value="3">Decaf</option>
+            <option value="4">Latte</option>
+            <option value="5">Cappuccino</option>
+            <option value="4">Flat White</option>
+            <option value="5">Cortado</option>
+    </select>
+    </div>
+</form>
+
