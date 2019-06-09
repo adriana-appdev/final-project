@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   match("", { :controller => "index", :action => "indexpage", :via => "get" })
   
   # Routes for the Users resource:
-  match("/users", { :controller => "users", :action => "index", :via => "get" })
-  # match("/users/:id", { :controller => "users", :action => "show", :via => "get" })
+  #match("/users", { :controller => "users", :action => "index", :via => "get" })
+  match("/users/:id", { :controller => "users", :action => "index", :via => "get" })
   
   # Routes for the Drink resource:
 
