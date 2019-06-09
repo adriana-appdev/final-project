@@ -16,4 +16,9 @@ class Favorite < ApplicationRecord
     
     belongs_to :drinks, :class_name => "Drink"
     belongs_to :user
+    
+    validates :coffee_chain, :presence => true 
+    validates :size, :presence => true 
+    validates :type_of_drink, :presence => true 
+    validates :user_id, :presence => true 
 end

@@ -19,7 +19,7 @@ class CaffeineServing < ApplicationRecord
     belongs_to :user, :class_name => "User"
     
     validates :coffee_chain, :presence => true 
-    # validates :user_id, :presence => true 
+    validates :user_id, :presence => true 
     validates :type_of_drink, :presence => true 
     validates :size, :presence => true 
 end
