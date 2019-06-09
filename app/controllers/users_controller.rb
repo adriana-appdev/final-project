@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @users_all = User.all.order({ :username => :asc })
 
     @users = User.where({:id => params.fetch("id")}).first
-    @user_intake = @users.caffeine_servings.order( {:created_at => :desc})
+    # @user_intake = @users.caffeine_servings.order( {:created_at => :desc}).at(0)
     
     render("user_templates/index.html.erb")
   end

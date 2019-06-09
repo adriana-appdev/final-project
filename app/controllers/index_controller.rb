@@ -38,8 +38,9 @@ class IndexController < ApplicationController
         
         p.save 
         render("result_templates/calc_result.html.erb")
+        
     end 
     
 end 
 
-# CREATE VALIDATIONS/SAVE NEW ROWS LOOK AT https://ide.c9.io/adrianabrito/msm_queries_excercise
+# CREATE VALIDATIONS/SAVE NEW ROWS LOOK AT https://ide.c9.io/adrianabrito/msm_queries_excercis

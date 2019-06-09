@@ -1,6 +1,8 @@
 class FavoritesController < ApplicationController
   def index
     @favorites = Favorite.all
+    
+    @favorites_user = Favorite.where(:user_id => current_user.id)
 
     render("favorite_templates/index.html.erb")
   end

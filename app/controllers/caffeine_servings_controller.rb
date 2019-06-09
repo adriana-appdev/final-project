@@ -1,6 +1,8 @@
 class CaffeineServingsController < ApplicationController
   def index
     @caffeine_servings = CaffeineServing.all
+    
+    @caffeine_servings_user = CaffeineServing.where(:user_id => current_user.id)
 
     render("caffeine_serving_templates/index.html.erb")
   end
